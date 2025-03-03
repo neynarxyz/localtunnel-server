@@ -29,10 +29,10 @@
   "bin": {
     "lt-server": "./bin/server.js"
   },
-  "main": "server.js",
+  "main": "start.js",
   "scripts": {
     "test": "mocha --check-leaks --require esm './**/*.test.js'",
-    "start": "node server.js",
+    "start": "node ./start.js",
     "dev": "node-dev bin/server --port 3000"
   }
 }

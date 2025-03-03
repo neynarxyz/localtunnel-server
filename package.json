@@ -26,10 +26,13 @@
     "supertest": "3.1.0",
     "ws": "5.1.1"
   },
+  "bin": {
+    "lt-server": "./bin/server.js"
+  },
   "main": "server.js",
   "scripts": {
     "test": "mocha --check-leaks --require esm './**/*.test.js'",
-    "start": "./bin/server",
+    "start": "node server.js",
     "dev": "node-dev bin/server --port 3000"
   }
 }

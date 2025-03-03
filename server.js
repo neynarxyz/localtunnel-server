@@ -12,7 +12,7 @@ const debug = Debug('localtunnel:server');
 export default function(opt) {
     opt = opt || {};
 
-    const validHosts = (opt.domain) ? [opt.domain] : undefined;
+    const validHosts = (opt.domain) ? [opt.domain] : ['localhost'];
     const myTldjs = tldjs.fromUserSettings({ validHosts });
     const landingPage = opt.landing || 'https://localtunnel.github.io/www/';
 
@@ -130,7 +130,7 @@ export default function(opt) {
             appCallback(req, res);
             return;
         }
-
+        
         const client = manager.getClient(clientId);
         if (!client) {
             res.statusCode = 404;

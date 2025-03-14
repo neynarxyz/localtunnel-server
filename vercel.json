@@ -1,16 +1,8 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "start.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "buildCommand": "yarn install",
-  "outputDirectory": ".",
-  "devCommand": "yarn run dev",
-  "installCommand": "yarn install",
-  "framework": null,
-  "regions": ["all"],
-  "public": false
+    "version": 2,
+    "builds": [{
+        "src": "start.js",
+        "use": "@vercel/node"
+    }],
+    "routes": [{"src": "/(.*)", "dest": "start.js"}]
 }

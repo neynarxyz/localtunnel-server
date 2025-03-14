@@ -2,9 +2,9 @@ import { debug } from 'book';
 import CreateServer from './server.js';
 
 const server = CreateServer({
-    // max_tcp_sockets: argv['max-sockets'],
-    // secure: argv.secure,
-    // domain: argv.domain,
+    max_tcp_sockets: 1000,
+    secure: true,
+    domain: 'localtunnel-server-psi.vercel.app',
 });
 
 const PORT = process.env.PORT || 3000;

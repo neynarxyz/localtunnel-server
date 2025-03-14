@@ -7,7 +7,7 @@ const server = CreateServer({
     // domain: argv.domain,
 });
 
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3000;
 
 server.listen(PORT, () => {
     debug('server listening on port: %d', server.address().port);

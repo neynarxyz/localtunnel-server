@@ -1,21 +1,11 @@
 {
   "version": 2,
-  "routes": [
+  "builds": [
     {
-      "src": "/(.*)",
-      "dest": "/api/index.js"
+      "src": "start.js",
+      "use": "@vercel/node"
     }
   ],
-  "functions": {
-    "api/index.js": {
-      "runtime": "nodejs"
-    }
-  },
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    }
-  },
   "buildCommand": "yarn install",
   "outputDirectory": ".",
   "devCommand": "yarn run dev",
